@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowLeft, ExternalLink, WifiOff, Printer, ShieldCheck, PieChart, Store, ChefHat, Activity } from 'lucide-react';
+import { ArrowLeft, ExternalLink, WifiOff, Printer, ShieldCheck, PieChart, Store, ChefHat, Activity, MonitorSmartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ChopCentralCaseStudy() {
@@ -55,7 +55,7 @@ export default function ChopCentralCaseStudy() {
         </div>
         <div>
           <h4 className="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-2">Stack</h4>
-          <p className="text-white font-medium">React, Tailwind, <br/> Firebase Cloud</p>
+          <p className="text-white font-medium">React, TypeScript, Tailwind, <br/> Firebase <span className="text-amber-500 text-xs font-bold ml-1 px-2 py-0.5 rounded bg-amber-500/10">+ more</span></p>
         </div>
         <div>
           <h4 className="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-2">Timeline</h4>
@@ -83,7 +83,7 @@ export default function ChopCentralCaseStudy() {
       <div className="w-full aspect-video bg-[#0a0a0a] rounded-3xl border border-white/10 mb-24 relative overflow-hidden group">
         <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/20 via-black to-red-900/10 z-0" />
         <img 
-          src="/thumbnails/chop-central.jpeg" 
+          src="/thumbnails/chop-central.png" 
           alt="Chop Central POS Interface" 
           className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
         />
@@ -133,6 +133,102 @@ export default function ChopCentralCaseStudy() {
               Strict RBAC ensures Cashiers can only view today's ledger to protect "Blind Close" integrity. Kitchen staff can toggle items "Sold Out" to update the POS dynamically, while Admins get global oversight and CSV exports.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION: System Showcase Gallery */}
+      <section className="mb-32">
+        <div className="mb-12">
+          <h2 className="text-sm font-bold tracking-widest bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent uppercase mb-4 inline-block flex items-center gap-2">
+            <MonitorSmartphone className="w-4 h-4" /> User Interface
+          </h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">System Showcase.</h3>
+          <p className="text-gray-400 mt-4 text-lg max-w-2xl">
+            A comprehensive look at the custom-designed interfaces powering the Cashier, Kitchen, and Administrative operations.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          {/* Main POS Interface - Takes full width */}
+          <div className="md:col-span-2 rounded-2xl overflow-hidden bg-slate-900 border border-white/10 group">
+            <div className="px-6 py-4 border-b border-white/5 bg-black/40 flex items-center gap-3">
+              <span className="w-3 h-3 rounded-full bg-red-500"></span>
+              <span className="w-3 h-3 rounded-full bg-amber-500"></span>
+              <span className="w-3 h-3 rounded-full bg-green-500"></span>
+              <h4 className="text-white font-semibold ml-2">Point of Sale (POS) - Main Terminal</h4>
+            </div>
+            <div className="overflow-hidden">
+              <img src="/c2.png" alt="POS Main Terminal" className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700" />
+            </div>
+          </div>
+
+          {/* Payment Modal */}
+          <div className="rounded-2xl overflow-hidden bg-slate-900 border border-white/10 group">
+            <div className="px-6 py-4 border-b border-white/5 bg-black/40">
+              <h4 className="text-white font-semibold">Smart Payment Routing Modal</h4>
+            </div>
+            <div className="overflow-hidden bg-[#0a0a0a] flex items-center justify-center">
+              <img src="/c3.png" alt="Payment Modal" className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700" />
+            </div>
+          </div>
+
+          {/* Login Portal */}
+          <div className="rounded-2xl overflow-hidden bg-slate-900 border border-white/10 group">
+            <div className="px-6 py-4 border-b border-white/5 bg-black/40">
+              <h4 className="text-white font-semibold">Secure Staff Authentication</h4>
+            </div>
+            <div className="overflow-hidden bg-[#0a0a0a] flex items-center justify-center">
+              <img src="/c1.png" alt="Login Portal" className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700" />
+            </div>
+          </div>
+
+          {/* Kitchen Live Orders */}
+          <div className="rounded-2xl overflow-hidden bg-slate-900 border border-white/10 group">
+            <div className="px-6 py-4 border-b border-white/5 bg-black/40">
+              <h4 className="text-white font-semibold">Kitchen Display System (KDS) - Live Orders</h4>
+            </div>
+            <div className="overflow-hidden">
+              <img src="/c4.png" alt="Kitchen Display Orders" className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700" />
+            </div>
+          </div>
+
+          {/* Kitchen Menu Availability */}
+          <div className="rounded-2xl overflow-hidden bg-slate-900 border border-white/10 group">
+            <div className="px-6 py-4 border-b border-white/5 bg-black/40">
+              <h4 className="text-white font-semibold">KDS - Menu Item Availability Engine</h4>
+            </div>
+            <div className="overflow-hidden">
+              <img src="/c5.png" alt="Kitchen Display Availability" className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700" />
+            </div>
+          </div>
+
+          {/* Admin Dashboard - Full Width */}
+          <div className="md:col-span-2 rounded-2xl overflow-hidden bg-slate-900 border border-white/10 group">
+            <div className="px-6 py-4 border-b border-white/5 bg-black/40 flex items-center gap-3">
+              <span className="w-3 h-3 rounded-full bg-red-500"></span>
+              <span className="w-3 h-3 rounded-full bg-amber-500"></span>
+              <span className="w-3 h-3 rounded-full bg-green-500"></span>
+              <h4 className="text-white font-semibold ml-2">Admin God-Mode - Live Ledger & Revenue</h4>
+            </div>
+            <div className="overflow-hidden">
+              <img src="/c6.png" alt="Admin Dashboard" className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700" />
+            </div>
+          </div>
+
+          {/* Admin Menu Editor - Full Width */}
+          <div className="md:col-span-2 rounded-2xl overflow-hidden bg-slate-900 border border-white/10 group">
+            <div className="px-6 py-4 border-b border-white/5 bg-black/40 flex items-center gap-3">
+              <span className="w-3 h-3 rounded-full bg-red-500"></span>
+              <span className="w-3 h-3 rounded-full bg-amber-500"></span>
+              <span className="w-3 h-3 rounded-full bg-green-500"></span>
+              <h4 className="text-white font-semibold ml-2">Admin God-Mode - Dynamic Menu & Price Editor</h4>
+            </div>
+            <div className="overflow-hidden">
+              <img src="/c7.png" alt="Admin Menu Editor" className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700" />
+            </div>
+          </div>
+
         </div>
       </section>
 

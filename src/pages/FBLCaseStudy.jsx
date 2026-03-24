@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowLeft, Code2, Database, ShieldAlert, Zap, Clock, Layout, Server, Smartphone, Lock, Map } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Code2, Database, ShieldAlert, Zap, Clock, Layout, Server, Smartphone, Lock, Map, MonitorSmartphone, Gamepad2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function FBLCaseStudy() {
@@ -55,7 +55,9 @@ export default function FBLCaseStudy() {
         </div>
         <div>
           <h4 className="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-2">Stack</h4>
-          <p className="text-white font-medium">React 18, Tailwind CSS, <br/> Firebase</p>
+          <p className="text-white font-medium leading-relaxed">
+            React 18, JavaScript, <br/> Tailwind, Firebase, <br/> FCM & Google cloud <span className="text-[#F5B041] text-xs font-bold ml-1 px-2 py-0.5 rounded bg-[#F5B041]/10">+ more</span>
+          </p>
         </div>
         <div>
           <h4 className="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-2">Duration</h4>
@@ -87,7 +89,7 @@ export default function FBLCaseStudy() {
       <div className="w-full aspect-video bg-[#0a0a0a] rounded-3xl border border-white/10 mb-24 relative overflow-hidden group">
         <div className="absolute inset-0 bg-gradient-to-tr from-emerald-900/20 via-black to-emerald-900/10 z-0" />
         <img 
-          src="/thumbnails/busa.jpeg" 
+          src="/thumbnails/fbl.png" 
           alt="Fantasy BUSA League Interface" 
           className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
         />
@@ -103,6 +105,23 @@ export default function FBLCaseStudy() {
         <div className="mb-12">
           <h2 className="text-sm font-bold tracking-widest bg-gradient-to-r from-[#FDE047] via-[#F5B041] to-[#E67E22] bg-clip-text text-transparent uppercase mb-4 inline-block">Architecture</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Engineering Spotlights.</h3>
+        </div>
+
+        {/* Phase 2 Spotlight - Full Width */}
+        <div className="bg-gradient-to-br from-white/5 to-transparent border border-[#F5B041]/20 p-8 md:p-10 rounded-3xl mb-8 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#F5B041]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+          <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
+            <div className="p-4 bg-black/50 rounded-2xl border border-white/10">
+              <Gamepad2 className="w-12 h-12 text-[#F5B041]" />
+            </div>
+            <div>
+              <div className="inline-block px-3 py-1 rounded-full bg-[#F5B041]/20 text-[#F5B041] text-xs font-bold uppercase tracking-wider mb-3">Phase 2 Delivery</div>
+              <h4 className="text-3xl font-bold text-white mb-4">Tactical Game Chips Engine</h4>
+              <p className="text-gray-400 leading-relaxed text-lg max-w-3xl">
+                To deepen tactical strategy and drive Weekly Active User (WAU) engagement, I engineered advanced one-time multipliers. The scoring engine handles complex isolated state evaluations for <strong>Triple Captain</strong> (3x points), <strong>Bench Boost</strong> (15-player scoring), and <strong>Wildcard</strong> (Unlimited budget-constrained transfers), fundamentally altering how the database parses a user's locked snapshot for that specific Gameweek.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -140,7 +159,7 @@ export default function FBLCaseStudy() {
         </div>
       </section>
 
-      {/* NEW SECTION: The Admin God-Mode */}
+      {/* The Admin God-Mode */}
       <section className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="order-2 lg:order-1 flex flex-col gap-6">
           <div className="p-6 bg-slate-900 border border-purple-500/30 rounded-2xl flex items-start gap-4 shadow-[0_0_20px_rgba(168,85,247,0.1)]">
@@ -167,38 +186,98 @@ export default function FBLCaseStudy() {
         </div>
       </section>
 
-      {/* Design Philosophy */}
-      <section className="mb-24 bg-[#0a0a0a] border border-white/5 p-8 md:p-16 rounded-3xl">
-        <h2 className="text-3xl font-bold text-white mb-6">Design Philosophy: <br className="md:hidden"/> <span className="text-[#F5B041] italic">"Sports Broadcast Premium"</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
-            <p>
-              The visual identity was specifically engineered to mimic the high-end, immersive graphics packages seen in modern UEFA Champions League broadcasts. 
-            </p>
-            <p>
-              By prioritizing a deep slate canvas (<code className="text-[#F5B041] text-sm bg-black/50 px-2 py-1 rounded">bg-slate-950</code>), the interface naturally reduces eye strain during prolonged periods of team management, while allowing critical tactical data and neon interactive accents to command immediate attention.
-            </p>
-            <ul className="space-y-3 mt-4">
-              <li className="flex items-center gap-3"><Layout className="w-5 h-5 text-[#F5B041]" /> CSS-Rendered Iso-Pitch for infinite scalability.</li>
-              <li className="flex items-center gap-3"><Code2 className="w-5 h-5 text-[#F5B041]" /> Dynamic SVG Gradients to prevent race conditions.</li>
-            </ul>
+      {/* NEW SECTION: Mobile System Showcase Gallery */}
+      <section className="mb-32">
+        <div className="mb-12">
+          <h2 className="text-sm font-bold tracking-widest bg-gradient-to-r from-[#FDE047] via-[#F5B041] to-[#E67E22] bg-clip-text text-transparent uppercase mb-4 inline-block flex items-center gap-2">
+            <MonitorSmartphone className="w-4 h-4" /> User Interface
+          </h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Mobile App Showcase.</h3>
+          <p className="text-gray-400 mt-4 text-lg max-w-2xl">
+            A comprehensive look at the custom-designed PWA mobile interfaces. The app features a high-contrast "Sports Broadcast Premium" aesthetic for players, and a rigorous, data-dense layout for Administrators.
+          </p>
+        </div>
+
+        {/* 10-Image Mobile Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+          
+          {/* User Side */}
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-[#1a1a1a] shadow-2xl">
+              <img src="/Userhome.jpeg" alt="Player Dashboard" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">Dashboard</p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="aspect-square bg-slate-950 rounded-2xl border border-white/10 flex items-center justify-center p-6 text-center">
-              <span className="text-white font-bold tracking-widest uppercase">Live Global Leaderboards</span>
+
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-[#1a1a1a] shadow-2xl">
+              <img src="/Transfertab.jpeg" alt="Team Pitch" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="aspect-square bg-slate-950 rounded-2xl border border-white/10 flex items-center justify-center p-6 text-center">
-              <span className="text-white font-bold tracking-widest uppercase">Dynamic Transfer Market</span>
-            </div>
-            <div className="col-span-2 aspect-[3/1] bg-gradient-to-r from-fuchsia-900/80 to-purple-900/80 rounded-2xl border border-fuchsia-500/30 flex items-center justify-center p-6 text-center">
-              <span className="text-white font-bold tracking-widest uppercase text-xl">15-Man Pitch UI</span>
-            </div>
+            <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">15-Man Pitch</p>
           </div>
+
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-[#1a1a1a] shadow-2xl">
+              <img src="/Statscenter.jpeg" alt="Global Leaderboard" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">Leaderboards</p>
+          </div>
+
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-[#1a1a1a] shadow-2xl">
+              <img src="/Playermodal.jpeg" alt="Player Stats" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">Deep Analytics</p>
+          </div>
+
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-[#1a1a1a] shadow-2xl">
+              <img src="/Usersettings.jpeg" alt="Manager Settings" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">Manager Settings</p>
+          </div>
+
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-[#1a1a1a] shadow-2xl">
+              <img src="/Rules.jpeg" alt="Game Rules" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <p className="text-center text-xs font-bold text-purple-400 uppercase tracking-widest">Global Rules</p>
+          </div>
+
+          {/* Admin Side */}
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-purple-900/30 shadow-2xl">
+              <img src="/Adminhome.jpeg" alt="Admin Upload" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <p className="text-center text-xs font-bold text-purple-400 uppercase tracking-widest">CSV Upload</p>
+          </div>
+
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-purple-900/30 shadow-2xl">
+              <img src="/Adminprofile.jpeg" alt="Admin Database" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <p className="text-center text-xs font-bold text-purple-400 uppercase tracking-widest">DB Setup</p>
+          </div>
+
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-purple-900/30 shadow-2xl">
+              <img src="/Adminsettings.jpeg" alt="Admin Season Config" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <p className="text-center text-xs font-bold text-purple-400 uppercase tracking-widest">Season Config</p>
+          </div>
+
+          <div className="group flex flex-col gap-3">
+            <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-purple-900/30 shadow-2xl">
+              <img src="/News.jpeg" alt="Admin News Editor" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <p className="text-center text-xs font-bold text-purple-400 uppercase tracking-widest">News Editor</p>
+          </div>
+
         </div>
       </section>
 
-      {/* NEW SECTION: Product Roadmap */}
-      <section className="mb-24 text-center max-w-4xl mx-auto border-t border-white/10 pt-24">
+      {/* Product Roadmap */}
+      <section className="mb-16 text-center max-w-4xl mx-auto border-t border-white/10 pt-24">
         <Map className="w-12 h-12 text-[#F5B041] mx-auto mb-6" />
         <h2 className="text-3xl font-bold text-white mb-6">Product Vision & Roadmap</h2>
         <p className="text-gray-400 leading-relaxed text-lg mb-8">
@@ -214,6 +293,15 @@ export default function FBLCaseStudy() {
             <span className="text-white font-medium block">B2B SaaS White-Labeling Platform</span>
           </div>
         </div>
+      </section>
+
+      {/* NEW SECTION: Conclusion */}
+      <section className="max-w-4xl mx-auto text-center mb-16 px-4">
+        <div className="bg-gradient-to-r from-transparent via-[#F5B041]/10 to-transparent h-px w-full mb-12"></div>
+        <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">More Than Just a Game.</h3>
+        <p className="text-xl text-gray-400 leading-relaxed">
+          Fantasy BUSA League represents the intersection of complex systems engineering and human-centric design. By merging predictive algorithms with a premium aesthetic, I built an ecosystem that doesn't just display sports data—it turns casual campus viewers into deeply invested tacticians.
+        </p>
       </section>
 
       {/* Playful Footer Link */}
