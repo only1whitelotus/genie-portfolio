@@ -15,7 +15,7 @@ export default function Contact() {
         
         <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
           Open for freelance gigs, epic collaborations, and full-time roles. 
-          Skip the lamp-rubbing—just drop a message and let's turn those chaotic 3 AM ideas into a masterpiece.
+          Skip the lamp-rubbing, just drop a message and let's turn those chaotic 3 AM ideas into a masterpiece.
         </p>
 
         <a 

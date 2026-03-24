@@ -80,7 +80,7 @@ export default function FBLCaseStudy() {
         <div className="space-y-6">
           <h3 className="text-3xl font-bold text-white">The Solution</h3>
           <p className="text-gray-400 leading-relaxed text-lg">
-            I architected and developed a full-scale Fantasy Football platform. By allowing students to act as virtual managers with a ₦100.0m virtual budget, we gamified the campus football experience. It bridges the gap between casual fans and hardcore tacticians.
+            We architected and developed a full-scale Fantasy Football platform. By allowing students to act as virtual managers with a ₦100.0m virtual budget, we gamified the campus football experience. It bridges the gap between casual fans and hardcore tacticians.
           </p>
         </div>
       </section>
@@ -118,7 +118,7 @@ export default function FBLCaseStudy() {
               <div className="inline-block px-3 py-1 rounded-full bg-[#F5B041]/20 text-[#F5B041] text-xs font-bold uppercase tracking-wider mb-3">Phase 2 Delivery</div>
               <h4 className="text-3xl font-bold text-white mb-4">Tactical Game Chips Engine</h4>
               <p className="text-gray-400 leading-relaxed text-lg max-w-3xl">
-                To deepen tactical strategy and drive Weekly Active User (WAU) engagement, I engineered advanced one-time multipliers. The scoring engine handles complex isolated state evaluations for <strong>Triple Captain</strong> (3x points), <strong>Bench Boost</strong> (15-player scoring), and <strong>Wildcard</strong> (Unlimited budget-constrained transfers), fundamentally altering how the database parses a user's locked snapshot for that specific Gameweek.
+                To deepen tactical strategy and drive Weekly Active User (WAU) engagement, we engineered advanced one-time multipliers. The scoring engine handles complex isolated state evaluations for <strong>Triple Captain</strong> (3x points), <strong>Bench Boost</strong> (15-player scoring), and <strong>Wildcard</strong> (Unlimited budget-constrained transfers), fundamentally altering how the database parses a user's locked snapshot for that specific Gameweek.
               </p>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function FBLCaseStudy() {
             <Clock className="w-10 h-10 text-[#F5B041] mb-6" />
             <h4 className="text-2xl font-bold text-white mb-4">Time-Machine Snapshots</h4>
             <p className="text-gray-400 leading-relaxed">
-              To prevent users from transferring players who already scored points, I built a dual-state architecture. At the deadline, the system safely clones the user's "Live Team" into a permanent, read-only snapshot. The scoring engine calculates points strictly based on these locked snapshots.
+              To prevent users from transferring players who already scored points, we built a dual-state architecture. At the deadline, the system safely clones the user's "Live Team" into a permanent, read-only snapshot. The scoring engine calculates points strictly based on these locked snapshots.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export default function FBLCaseStudy() {
             <Zap className="w-10 h-10 text-[#F5B041] mb-6" />
             <h4 className="text-2xl font-bold text-white mb-4">Greedy Smart-Fill Algorithm</h4>
             <p className="text-gray-400 leading-relaxed">
-              For casual players, I engineered an O(N log N) Auto-Pick algorithm. It calculates baseline survival costs, reserves budget for empty slots, and iterates slot-by-slot to draft the highest-scoring players possible without breaking the strict ₦100.0m cap or 4-player team limits.
+              For casual players, we engineered an O(N log N) Auto-Pick algorithm. It calculates baseline survival costs, reserves budget for empty slots, and iterates slot-by-slot to draft the highest-scoring players possible without breaking the strict ₦100.0m cap or 4-player team limits.
             </p>
           </div>
 
@@ -181,12 +181,12 @@ export default function FBLCaseStudy() {
           <h2 className="text-sm font-bold tracking-widest bg-gradient-to-r from-[#FDE047] via-[#F5B041] to-[#E67E22] bg-clip-text text-transparent uppercase mb-2 inline-block">Backend Management</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">The "God-Mode" Admin Dashboard.</h3>
           <p className="text-gray-400 leading-relaxed text-lg">
-            Building the user-facing app was only half the challenge. I developed a secure, role-based administrative dashboard that allows league organizers to manage the entire ecosystem without touching a single line of code.
+            Building the user-facing app was only half the challenge. We developed a secure, role-based administrative dashboard that allows league organizers to manage the entire ecosystem without touching a single line of code.
           </p>
         </div>
       </section>
 
-      {/* NEW SECTION: Mobile System Showcase Gallery */}
+      {/* Mobile System Showcase Gallery */}
       <section className="mb-32">
         <div className="mb-12">
           <h2 className="text-sm font-bold tracking-widest bg-gradient-to-r from-[#FDE047] via-[#F5B041] to-[#E67E22] bg-clip-text text-transparent uppercase mb-4 inline-block flex items-center gap-2">
@@ -201,7 +201,7 @@ export default function FBLCaseStudy() {
         {/* 10-Image Mobile Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           
-          {/* User Side */}
+          {/* User Side (Now 6 items including Rules) */}
           <div className="group flex flex-col gap-3">
             <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-[#1a1a1a] shadow-2xl">
               <img src="/Userhome.jpeg" alt="Player Dashboard" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
@@ -241,10 +241,10 @@ export default function FBLCaseStudy() {
             <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-[#1a1a1a] shadow-2xl">
               <img src="/Rules.jpeg" alt="Game Rules" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <p className="text-center text-xs font-bold text-purple-400 uppercase tracking-widest">Global Rules</p>
+            <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">Global Rules</p>
           </div>
 
-          {/* Admin Side */}
+          {/* Admin Side (Now 4 items) */}
           <div className="group flex flex-col gap-3">
             <div className="rounded-[2rem] overflow-hidden bg-[#0a0a0a] border-[6px] border-purple-900/30 shadow-2xl">
               <img src="/Adminhome.jpeg" alt="Admin Upload" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
@@ -281,7 +281,7 @@ export default function FBLCaseStudy() {
         <Map className="w-12 h-12 text-[#F5B041] mx-auto mb-6" />
         <h2 className="text-3xl font-bold text-white mb-6">Product Vision & Roadmap</h2>
         <p className="text-gray-400 leading-relaxed text-lg mb-8">
-          The launch in 2026 is just the foundation. I architected the codebase with modularity in mind to support massive future scaling, including shifting the focus to community competition and B2B SaaS solutions.
+          The launch in 2026 is just the foundation. We architected the codebase with modularity in mind to support massive future scaling, including shifting the focus to community competition and B2B SaaS solutions.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <div className="bg-white/5 border border-white/10 px-6 py-4 rounded-xl flex-1 text-left">
@@ -295,12 +295,12 @@ export default function FBLCaseStudy() {
         </div>
       </section>
 
-      {/* NEW SECTION: Conclusion */}
+      {/* Conclusion */}
       <section className="max-w-4xl mx-auto text-center mb-16 px-4">
         <div className="bg-gradient-to-r from-transparent via-[#F5B041]/10 to-transparent h-px w-full mb-12"></div>
         <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">More Than Just a Game.</h3>
         <p className="text-xl text-gray-400 leading-relaxed">
-          Fantasy BUSA League represents the intersection of complex systems engineering and human-centric design. By merging predictive algorithms with a premium aesthetic, I built an ecosystem that doesn't just display sports data—it turns casual campus viewers into deeply invested tacticians.
+          Fantasy BUSA League represents the intersection of complex systems engineering and human-centric design. By merging predictive algorithms with a premium aesthetic, we built an ecosystem that doesn't just display sports data—it turns casual campus viewers into deeply invested tacticians.
         </p>
       </section>
 
