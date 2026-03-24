@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ExternalLink, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { PORTFOLIO_ITEMS } from '../data';
 
-export default function Portfolio({ activeFilter, setActiveFilter, filteredItems }) {
+export default function Portfolio() {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredItems = activeFilter === 'All' 
+    ? PORTFOLIO_ITEMS 
+    : PORTFOLIO_ITEMS.filter(item => item.category === activeFilter);
+
   return (
     <section id="work" className="py-24 md:py-32 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
@@ -30,7 +38,7 @@ export default function Portfolio({ activeFilter, setActiveFilter, filteredItems
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => (
-            <div key={item.id} className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/5 cursor-pointer">
+            <a href={item.projectUrl} target="_blank" rel="noopener noreferrer" key={item.id} className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/5 cursor-pointer block">
               <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-in-out`} />
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20" />
 
@@ -48,17 +56,17 @@ export default function Portfolio({ activeFilter, setActiveFilter, filteredItems
                   <p className="text-gray-400 text-sm">{item.role}</p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
         {activeFilter !== 'All' && (
           <div className="mt-16 text-center">
-            <a href="#" className="relative inline-flex items-center space-x-3 bg-transparent border border-white/20 hover:border-transparent px-8 py-4 rounded-full font-semibold transition-all duration-300 group overflow-hidden">
+            <Link to={`/category/${activeFilter.toLowerCase()}`} className="relative inline-flex items-center space-x-3 bg-transparent border border-white/20 hover:border-transparent px-8 py-4 rounded-full font-semibold transition-all duration-300 group overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-[#FDE047] via-[#F5B041] to-[#E67E22] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative z-10 group-hover:text-black transition-colors duration-300">View more {activeFilter} projects</span>
               <ArrowRight className="relative z-10 w-4 h-4 group-hover:text-black transition-colors duration-300" />
-            </a>
+            </Link>
           </div>
         )}
       </div>

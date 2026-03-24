@@ -16,17 +16,17 @@ export default function Footer() {
         </div>
         
         <div className="flex flex-wrap justify-center gap-6 text-sm font-medium">
-          <a href="https://drive.google.com/drive/folders/1-n_6FIrqUOfvWUQgJmepnYtKQOTHpniw" className="text-gray-400 hover:text-[#F5B041] transition-colors flex items-center gap-1.5">
+          <a href="https://drive.google.com/drive/folders/1-n_6FIrqUOfvWUQgJmepnYtKQOTHpniw" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#F5B041] transition-colors flex items-center gap-1.5">
             <FileText className="w-4 h-4" /> Resume
           </a>
-          <a href="https://www.behance.net/whitelotus9" className="text-gray-400 hover:text-[#F5B041] transition-colors">Behance</a>
-          <a href="https://www.instagram.com/creativegenie1?igsh=c2ZhaTk3NGR2YmZh" className="text-gray-400 hover:text-[#F5B041] transition-colors flex items-center gap-1.5">
+          <a href="https://www.behance.net/whitelotus9" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#F5B041] transition-colors">Behance</a>
+          <a href="https://www.instagram.com/creativegenie1?igsh=c2ZhaTk3NGR2YmZh" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#F5B041] transition-colors flex items-center gap-1.5">
             <InstagramIcon className="w-4 h-4" /> Instagram
           </a>
-          <a href="https://x.com/only1whitelotus" className="text-gray-400 hover:text-[#F5B041] transition-colors flex items-center gap-1.5">
+          <a href="https://x.com/only1whitelotus" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#F5B041] transition-colors flex items-center gap-1.5">
             <XIcon className="w-4 h-4" /> X
           </a>
-          <a href="https://www.linkedin.com/in/only1whitelotus?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="text-gray-400 hover:text-[#F5B041] transition-colors flex items-center gap-1.5">
+          <a href="https://www.linkedin.com/in/only1whitelotus?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#F5B041] transition-colors flex items-center gap-1.5">
             <LinkedinIcon className="w-4 h-4" /> LinkedIn
           </a>
         </div>
