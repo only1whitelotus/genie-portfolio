@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 
 // Import Pages
 import Home from './pages/Home';
+import VideoPage from './pages/VideoPage';
 import CategoryPage from './pages/CategoryPage';
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/category/video" element={<VideoPage />} />
           <Route path="/category/:category" element={<CategoryPage />} />
         </Routes>
 
