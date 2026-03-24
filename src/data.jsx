@@ -13,39 +13,89 @@ export const SERVICES = [
     title: 'Video & Motion',
     description: 'Directing, producing, and editing high-impact visual stories. From concept to final cut.',
     icon: <MonitorPlay className="w-8 h-8 text-[#F5B041]" />,
-    skills: ['Davinci Resolve', 'After Effects', 'Directing', 'Storyboarding'],
+    skills: ['Davinci Resolve', 'After Effects', 'Directing', 'Storyboarding', 'Motion Design', ],
     accent: 'from-rose-500/10'
   },
   {
     title: 'Web Development',
     description: 'Building responsive, modern, and performant web applications using cutting-edge technologies.',
     icon: <Code2 className="w-8 h-8 text-[#F5B041]" />,
-    skills: ['React', 'JavaScript', 'Tailwind CSS', 'Three.js'],
+    skills: ['React', 'JavaScript', 'Tailwind CSS', 'Astro', 'Framer Motion', 'Firebase', 'Python'],
     accent: 'from-yellow-500/10'
   }
 ];
 
 export const PORTFOLIO_ITEMS = [
-  { id: 1, title: 'Neon Nights', category: 'Video', role: 'Director & Editor', color: 'from-purple-900/80 to-black', projectUrl: 'https://youtube.com' },
-  { id: 2, title: 'Chop Central ERMS', category: 'Web', role: 'Fullstack Developer', color: 'from-amber-900/80 to-black', projectUrl: 'https://only1whitelotus.github.io/chop-central-case-study' },
-  { id: 3, title: 'Ecoloop Brand', category: 'Design', role: 'Lead Designer', color: 'from-neutral-800 to-black', projectUrl: 'https://ecoloop-chi.vercel.app' },
-  { id: 4, title: 'Echoes Doc', category: 'Video', role: 'Producer', color: 'from-blue-900/80 to-black', projectUrl: 'https://ecoloop-chi.vercel.app' },
-  { id: 5, title: 'Fantasy BUSA League', category: 'Web', role: 'Lead Software Designer & Developer', color: 'from-emerald-900/80 to-black', projectUrl: 'https://ecoloop-chi.vercel.app' },
-  { id: 6, title: 'Swiftlink UI Kit', category: 'Design', role: 'Product Designer', color: 'from-amber-800/60 to-black', projectUrl: 'https://ecoloop-chi.vercel.app' },
+  { 
+    id: 1, 
+    title: 'Reckless Era Launch', 
+    category: 'Video', 
+    role: 'Director & Editor', 
+    color: 'from-red-900/80 to-black',
+    image: '/thumbnails/reck1.jpeg',
+    projectUrl: '/category/video#reckless-era-collection-launch' 
+  },
+  { 
+    id: 2, 
+    title: 'Chop Central ERMS', 
+    category: 'Web', 
+    role: 'Fullstack Developer', 
+    color: 'from-amber-900/80 to-black',
+    image: '/thumbnails/chop-central.png',
+    projectUrl: 'https://only1whitelotus.github.io/chop-central-case-study' 
+  },
+  { 
+    id: 3, 
+    title: 'Ecoloop Brand', 
+    category: 'Design', 
+    role: 'Lead Designer', 
+    color: 'from-neutral-800 to-black',
+    image: '/thumbnails/ecoloop.png',
+    projectUrl: 'https://ecoloop-chi.vercel.app' 
+  },
+  { 
+    id: 4, 
+    title: 'Channel Opener Animation', 
+    category: 'Video', 
+    role: 'Motion Designer', 
+    color: 'from-purple-900/80 to-black',
+    image: '/thumbnails/yte.jpeg',
+    projectUrl: '/category/video#channel-opener-animation' 
+  },
+  { 
+    id: 5, 
+    title: 'Fantasy BUSA League', 
+    category: 'Web', 
+    role: 'Lead Software Designer & Developer', 
+    color: 'from-emerald-900/80 to-black',
+    image: '/thumbnails/fbl.png',
+    projectUrl: 'https://ecoloop-chi.vercel.app' 
+  },
+  { 
+    id: 6, 
+    title: 'Swiftlink UI Kit', 
+    category: 'Design', 
+    role: 'Product Designer', 
+    color: 'from-amber-800/60 to-black',
+    image: '/thumbnails/swiftlink.png',
+    projectUrl: 'https://ecoloop-chi.vercel.app' 
+  },
   { 
     id: 7, 
-    title: 'New Design Concept', 
+    title: 'Foodify Branding', 
     category: 'Design', 
-    role: 'Visual Designer', 
-    color: 'from-blue-900/80 to-black', 
-    projectUrl: 'https://behance.net/your-new-project' 
+    role: 'Brand Designer', 
+    color: 'from-blue-900/80 to-black',
+    image: '/thumbnails/foodify.jpeg',
+    projectUrl: 'https://www.behance.net/gallery/205022403/Foodify-%28Brand-Identity%29' 
   },
   { 
     id: 8, 
-    title: 'Cool App Promo', 
+    title: 'Fruision – Visualizer', 
     category: 'Video', 
-    role: 'Director', 
-    color: 'from-rose-900/80 to-black', 
-    projectUrl: 'https://youtube.com/your-new-video' 
+    role: 'Editor & Motion', 
+    color: 'from-orange-900/80 to-black',
+    image: '/thumbnails/fruison.jpeg',
+    projectUrl: '/category/video#fruision-product-visualizer' 
   },
 ];

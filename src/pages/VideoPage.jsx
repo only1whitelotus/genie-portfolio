@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { ArrowLeft, Play, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const VIDEO_SECTIONS = [
   {
@@ -92,10 +92,23 @@ const VIDEO_SECTIONS = [
 ];
 
 export default function VideoPage() {
-  // Scroll to top on load
+  const location = useLocation();
+
+  // Scroll to the specific video if a hash is present in the URL, otherwise scroll to top
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (location.hash) {
+      // Add a tiny delay to ensure the DOM has painted the elements before scrolling
+      setTimeout(() => {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   return (
     <div className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto min-h-screen relative z-10">
@@ -121,46 +134,56 @@ export default function VideoPage() {
             </header>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {section.videos.map((video, vIdx) => (
-                <article key={vIdx} className="group flex flex-col bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden hover:border-[#F5B041]/40 transition-all duration-300 hover:-translate-y-1">
-                  
-                  {/* Media Area */}
-                  <div className="relative aspect-[4/5] sm:aspect-video md:aspect-[4/5] overflow-hidden bg-black">
-                    {video.type === "self" ? (
-                      <video
-                        src={video.src}
-                        poster={video.poster}
-                        controls
-                        preload="metadata"
-                        playsInline
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : (
-                      <a href={video.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full relative cursor-pointer">
-                        <img
-                          src={video.thumbnail}
-                          alt={video.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-12 h-12 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
-                            <Play className="w-5 h-5 text-white fill-white ml-1" />
-                          </div>
-                        </div>
-                        <div className="absolute bottom-4 right-4 bg-black/90 text-[#F5B041] px-4 py-1.5 rounded-full text-xs font-bold tracking-wide border border-white/10 flex items-center gap-2">
-                          Watch on IG <ExternalLink className="w-3 h-3" />
-                        </div>
-                      </a>
-                    )}
-                  </div>
+              {section.videos.map((video, vIdx) => {
+                // We create a clean, URL-friendly ID from the video title 
+                // e.g. "Channel Opener Animation" -> "channel-opener-animation"
+                const videoId = video.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
-                  {/* Text Area */}
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#F5B041] transition-colors">{video.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{video.description}</p>
-                  </div>
-                </article>
-              ))}
+                return (
+                  <article 
+                    key={vIdx} 
+                    id={videoId} // Attach the ID here!
+                    className="group flex flex-col bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden hover:border-[#F5B041]/40 transition-all duration-300 hover:-translate-y-1"
+                  >
+                    
+                    {/* Media Area */}
+                    <div className="relative aspect-[4/5] sm:aspect-video md:aspect-[4/5] overflow-hidden bg-black">
+                      {video.type === "self" ? (
+                        <video
+                          src={video.src}
+                          poster={video.poster}
+                          controls
+                          preload="metadata"
+                          playsInline
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      ) : (
+                        <a href={video.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full relative cursor-pointer">
+                          <img
+                            src={video.thumbnail}
+                            alt={video.title}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-12 h-12 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+                              <Play className="w-5 h-5 text-white fill-white ml-1" />
+                            </div>
+                          </div>
+                          <div className="absolute bottom-4 right-4 bg-black/90 text-[#F5B041] px-4 py-1.5 rounded-full text-xs font-bold tracking-wide border border-white/10 flex items-center gap-2">
+                            Watch on IG <ExternalLink className="w-3 h-3" />
+                          </div>
+                        </a>
+                      )}
+                    </div>
+
+                    {/* Text Area */}
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#F5B041] transition-colors">{video.title}</h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">{video.description}</p>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </section>
         ))}
