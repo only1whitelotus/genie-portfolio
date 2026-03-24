@@ -6,9 +6,13 @@ import { PORTFOLIO_ITEMS } from '../data';
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('All');
 
+  // Filter the items by category first
   const filteredItems = activeFilter === 'All' 
     ? PORTFOLIO_ITEMS 
     : PORTFOLIO_ITEMS.filter(item => item.category === activeFilter);
+
+  // PRO TIP: Only show the first 6 items on the Home Page!
+  const displayedItems = filteredItems.slice(0, 6);
 
   return (
     <section id="work" className="py-24 md:py-32 px-6 md:px-12">
@@ -37,7 +41,8 @@ export default function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
+          {/* We map over 'displayedItems' instead of 'filteredItems' */}
+          {displayedItems.map((item) => (
             <a href={item.projectUrl} target="_blank" rel="noopener noreferrer" key={item.id} className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/5 cursor-pointer block">
               <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-in-out`} />
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20" />
@@ -60,11 +65,14 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {activeFilter !== 'All' && (
+        {/* View More Button - Always visible if a specific category is selected OR if there are more than 6 total items! */}
+        {(activeFilter !== 'All' || filteredItems.length > 6) && (
           <div className="mt-16 text-center">
-            <Link to={`/category/${activeFilter.toLowerCase()}`} className="relative inline-flex items-center space-x-3 bg-transparent border border-white/20 hover:border-transparent px-8 py-4 rounded-full font-semibold transition-all duration-300 group overflow-hidden">
+            <Link to={activeFilter === 'All' ? '/category/design' : `/category/${activeFilter.toLowerCase()}`} className="relative inline-flex items-center space-x-3 bg-transparent border border-white/20 hover:border-transparent px-8 py-4 rounded-full font-semibold transition-all duration-300 group overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-[#FDE047] via-[#F5B041] to-[#E67E22] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="relative z-10 group-hover:text-black transition-colors duration-300">View more {activeFilter} projects</span>
+              <span className="relative z-10 group-hover:text-black transition-colors duration-300">
+                View more {activeFilter === 'All' ? 'projects' : activeFilter + ' projects'}
+              </span>
               <ArrowRight className="relative z-10 w-4 h-4 group-hover:text-black transition-colors duration-300" />
             </Link>
           </div>
