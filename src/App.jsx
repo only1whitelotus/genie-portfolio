@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 
 // Import Pages
 import Home from './pages/Home';
+import ChopCentralCaseStudy from './pages/ChopCentralCaseStudy';
+import FBLCaseStudy from './pages/FBLCaseStudy';
 import VideoPage from './pages/VideoPage';
 import CategoryPage from './pages/CategoryPage';
 
@@ -37,6 +39,8 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/project/fbl" element={<FBLCaseStudy />} /> 
+          <Route path="/project/chop-central" element={<ChopCentralCaseStudy />} />
           <Route path="/category/video" element={<VideoPage />} />
           <Route path="/category/:category" element={<CategoryPage />} />
         </Routes>

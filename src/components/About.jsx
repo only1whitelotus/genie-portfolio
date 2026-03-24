@@ -58,7 +58,7 @@ export default function About() {
              </div>
              <div className="w-px h-12 bg-white/10 mx-2 hidden sm:block"></div>
              <div className="flex flex-col">
-               <span className="text-3xl font-bold text-white">50+</span>
+               <span className="text-3xl font-bold text-white">100+</span>
                <span className="text-xs text-gray-500 uppercase tracking-wider mt-1 font-semibold">Projects Delivered</span>
              </div>
           </div>

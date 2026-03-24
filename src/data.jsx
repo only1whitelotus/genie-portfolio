@@ -42,7 +42,7 @@ export const PORTFOLIO_ITEMS = [
     role: 'Fullstack Developer', 
     color: 'from-amber-900/80 to-black',
     image: '/thumbnails/chop-central.png',
-    projectUrl: 'https://only1whitelotus.github.io/chop-central-case-study' 
+    projectUrl: '/project/chop-central'
   },
   { 
     id: 3, 
@@ -69,7 +69,7 @@ export const PORTFOLIO_ITEMS = [
     role: 'Lead Software Designer & Developer', 
     color: 'from-emerald-900/80 to-black',
     image: '/thumbnails/fbl.png',
-    projectUrl: 'https://ecoloop-chi.vercel.app' 
+    projectUrl: '/project/fbl' 
   },
   { 
     id: 6, 
