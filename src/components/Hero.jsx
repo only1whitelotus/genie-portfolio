@@ -11,7 +11,8 @@ export default function Hero() {
             <span>Available for new projects (and good vibes)</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.1] text-white">
+          {/* SCALED DOWN TEXT SIZES HERE */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1] text-white">
             Your friendly neighborhood <br />
             <span className="bg-gradient-to-r from-[#FEF08A] via-[#F5B041] to-[#E67E22] bg-clip-text text-transparent">
               Creative Genie.

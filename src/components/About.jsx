@@ -4,10 +4,11 @@ import { Sparkles } from 'lucide-react';
 export default function About() {
   return (
     <section id="about" className="py-24 px-6 md:px-12 relative border-t border-white/5">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Changed 'items-center' to 'items-stretch' so both columns match heights! */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
         
-        {/* Profile Image Wrapper */}
-        <div className="relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/10 group">
+        {/* Profile Image Wrapper - Now dynamically fills the height of the row on Desktop */}
+        <div className="lg:col-span-5 relative w-full aspect-square lg:aspect-auto lg:h-full rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/10 group min-h-[400px]">
            <div className="absolute inset-0 bg-gradient-to-tr from-[#E67E22]/30 via-orange-900/20 to-rose-900/20 group-hover:scale-105 transition-transform duration-700 z-10 pointer-events-none" />
            <img 
              src="/profile.png" 
@@ -17,9 +18,11 @@ export default function About() {
         </div>
 
         {/* Text Content */}
-        <div className="space-y-6">
-          <h2 className="text-sm font-bold tracking-widest bg-gradient-to-r from-[#FDE047] via-[#F5B041] to-[#E67E22] bg-clip-text text-transparent uppercase mb-4 inline-block">About Me</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight">Crafting experiences through code and lens.</h3>
+        <div className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:py-4">
+          <div>
+            <h2 className="text-sm font-bold tracking-widest bg-gradient-to-r from-[#FDE047] via-[#F5B041] to-[#E67E22] bg-clip-text text-transparent uppercase mb-4 inline-block">About Me</h2>
+            <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight">Crafting experiences through code and lens.</h3>
+          </div>
           
           <div className="space-y-4 text-gray-400 leading-relaxed text-lg">
             <p>
@@ -55,7 +58,7 @@ export default function About() {
              </div>
              <div className="w-px h-12 bg-white/10 mx-2 hidden sm:block"></div>
              <div className="flex flex-col">
-               <span className="text-3xl font-bold text-white">100+</span>
+               <span className="text-3xl font-bold text-white">50+</span>
                <span className="text-xs text-gray-500 uppercase tracking-wider mt-1 font-semibold">Projects Delivered</span>
              </div>
           </div>
