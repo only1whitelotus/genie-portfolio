@@ -22,7 +22,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed">
             I design interfaces, write code, and direct videos. Basically, I got tired of picking just one career. If you need something to look illegally good and actually work flawlessly, you're in the right place. 
             <br className="hidden md:block" /><br className="hidden md:block" />
-            <span className="text-sm italic text-gray-500">(No rubbing of lamps required, just send an email.)</span>
+            <span className="text-sm italic text-[#F5B041]">(No rubbing of lamps required, just send an email.)</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
