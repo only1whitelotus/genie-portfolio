@@ -73,12 +73,12 @@ export const PORTFOLIO_ITEMS = [
   },
   { 
     id: 6, 
-    title: 'Swiftlink UI Kit', 
+    title: 'Rex Sartorial Branding', 
     category: 'Design', 
-    role: 'Product Designer', 
+    role: 'Brand Designer', 
     color: 'from-amber-800/60 to-black',
-    image: '/thumbnails/swiftlink.png',
-    projectUrl: 'https://ecoloop-chi.vercel.app' 
+    image: '/rex/mockup-1.png',
+    projectUrl: '/project/rex' 
   },
   { 
     id: 7, 
