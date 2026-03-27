@@ -48,10 +48,10 @@ export const PORTFOLIO_ITEMS = [
     id: 3, 
     title: 'Ecoloop Brand', 
     category: 'Design', 
-    role: 'Lead Designer', 
+    role: 'Brand Architect & Product Designer', 
     color: 'from-neutral-800 to-black',
-    image: '/thumbnails/ecoloop.png',
-    projectUrl: 'https://ecoloop-chi.vercel.app' 
+    image: '/thumbnails/ecoloop-main.png',
+    projectUrl: '/project/ecoloop' 
   },
   { 
     id: 4, 
