@@ -48,7 +48,7 @@ export default function RexSartorialCaseStudy() {
         </div>
         <div>
           <h4 className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-3">Timeframe</h4>
-          <p className="text-white font-medium text-lg leading-snug">June — August <br/>20254</p>
+          <p className="text-white font-medium text-lg leading-snug">June — August <br/>2025</p>
         </div>
         <div>
           <h4 className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-3">Sector</h4>
