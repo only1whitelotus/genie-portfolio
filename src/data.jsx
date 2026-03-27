@@ -50,7 +50,7 @@ export const PORTFOLIO_ITEMS = [
     category: 'Design', 
     role: 'Brand Architect & Product Designer', 
     color: 'from-neutral-800 to-black',
-    image: '/thumbnails/ecoloop-main.png',
+    image: '/ecoloop-main.png',
     projectUrl: '/project/ecoloop' 
   },
   { 
@@ -87,7 +87,7 @@ export const PORTFOLIO_ITEMS = [
     role: 'Brand Designer', 
     color: 'from-blue-900/80 to-black',
     image: '/thumbnails/foodify.jpeg',
-    projectUrl: 'https://www.behance.net/gallery/205022403/Foodify-%28Brand-Identity%29' 
+    projectUrl: '/project/foodify' 
   },
   { 
     id: 8, 

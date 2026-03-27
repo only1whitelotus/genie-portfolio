@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import ChopCentralCaseStudy from './pages/ChopCentralCaseStudy';
 import FBLCaseStudy from './pages/FBLCaseStudy';
 import EcoloopCaseStudy from './pages/EcoloopCaseStudy';
+import Foodify from './pages/Foodify';
 import VideoPage from './pages/VideoPage';
 import CategoryPage from './pages/CategoryPage';
 
@@ -41,6 +42,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/fbl" element={<FBLCaseStudy />} /> 
+          <Route path="/project/foodify" element={<Foodify />} /> 
           <Route path="/project/chop-central" element={<ChopCentralCaseStudy />} />
           <Route path="/project/ecoloop" element={<EcoloopCaseStudy />} />
           <Route path="/category/video" element={<VideoPage />} />
