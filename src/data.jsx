@@ -27,24 +27,6 @@ export const SERVICES = [
 
 export const PORTFOLIO_ITEMS = [
   { 
-    id: 3, 
-    title: 'Reckless Era Launch', 
-    category: 'Video', 
-    role: 'Director & Editor', 
-    color: 'from-red-900/80 to-black',
-    image: '/thumbnails/reck1.jpeg',
-    projectUrl: '/category/video#reckless-era-collection-launch' 
-  },
-  { 
-    id: 5, 
-    title: 'Chop Central ERMS', 
-    category: 'Web', 
-    role: 'Fullstack Developer', 
-    color: 'from-amber-900/80 to-black',
-    image: '/thumbnails/chop-central.png',
-    projectUrl: '/project/chop-central'
-  },
-  { 
     id: 1, 
     title: 'Ecoloop Brand', 
     category: 'Design', 
@@ -52,15 +34,6 @@ export const PORTFOLIO_ITEMS = [
     color: 'from-neutral-800 to-black',
     image: '/ecoloop-main.png',
     projectUrl: '/project/ecoloop' 
-  },
-  { 
-    id: 6, 
-    title: 'Channel Opener Animation', 
-    category: 'Video', 
-    role: 'Motion Designer', 
-    color: 'from-purple-900/80 to-black',
-    image: '/thumbnails/yte.jpeg',
-    projectUrl: '/category/video#channel-opener-animation' 
   },
   { 
     id: 2, 
@@ -72,6 +45,15 @@ export const PORTFOLIO_ITEMS = [
     projectUrl: '/project/fbl' 
   },
   { 
+    id: 3, 
+    title: 'Reckless Era Launch', 
+    category: 'Video', 
+    role: 'Director & Editor', 
+    color: 'from-red-900/80 to-black',
+    image: '/thumbnails/reck1.jpeg',
+    projectUrl: '/category/video#reckless-era-collection-launch' 
+  },
+  { 
     id: 4, 
     title: 'Rex Sartorial Branding', 
     category: 'Design', 
@@ -79,6 +61,24 @@ export const PORTFOLIO_ITEMS = [
     color: 'from-amber-800/60 to-black',
     image: '/rex/mockup-1.png',
     projectUrl: '/project/rex' 
+  },
+  { 
+    id: 5, 
+    title: 'Chop Central ERMS', 
+    category: 'Web', 
+    role: 'Fullstack Developer', 
+    color: 'from-amber-900/80 to-black',
+    image: '/thumbnails/chop-central.png',
+    projectUrl: '/project/chop-central'
+  },
+  { 
+    id: 6, 
+    title: 'Channel Opener Animation', 
+    category: 'Video', 
+    role: 'Motion Designer', 
+    color: 'from-purple-900/80 to-black',
+    image: '/thumbnails/yte.jpeg',
+    projectUrl: '/category/video#channel-opener-animation' 
   },
   { 
     id: 7, 
