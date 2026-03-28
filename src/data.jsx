@@ -27,7 +27,7 @@ export const SERVICES = [
 
 export const PORTFOLIO_ITEMS = [
   { 
-    id: 1, 
+    id: 3, 
     title: 'Reckless Era Launch', 
     category: 'Video', 
     role: 'Director & Editor', 
@@ -36,7 +36,7 @@ export const PORTFOLIO_ITEMS = [
     projectUrl: '/category/video#reckless-era-collection-launch' 
   },
   { 
-    id: 2, 
+    id: 5, 
     title: 'Chop Central ERMS', 
     category: 'Web', 
     role: 'Fullstack Developer', 
@@ -45,7 +45,7 @@ export const PORTFOLIO_ITEMS = [
     projectUrl: '/project/chop-central'
   },
   { 
-    id: 3, 
+    id: 1, 
     title: 'Ecoloop Brand', 
     category: 'Design', 
     role: 'Brand Architect & Product Designer', 
@@ -54,7 +54,7 @@ export const PORTFOLIO_ITEMS = [
     projectUrl: '/project/ecoloop' 
   },
   { 
-    id: 4, 
+    id: 6, 
     title: 'Channel Opener Animation', 
     category: 'Video', 
     role: 'Motion Designer', 
@@ -63,7 +63,7 @@ export const PORTFOLIO_ITEMS = [
     projectUrl: '/category/video#channel-opener-animation' 
   },
   { 
-    id: 5, 
+    id: 2, 
     title: 'Fantasy BUSA League', 
     category: 'Web', 
     role: 'Lead Software Designer & Developer', 
@@ -72,7 +72,7 @@ export const PORTFOLIO_ITEMS = [
     projectUrl: '/project/fbl' 
   },
   { 
-    id: 6, 
+    id: 4, 
     title: 'Rex Sartorial Branding', 
     category: 'Design', 
     role: 'Brand Designer', 
