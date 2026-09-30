@@ -733,6 +733,60 @@
       }
     ]
   },
+  "identity/genie-icon.png": {
+    "width": 711,
+    "height": 711,
+    "sources": [
+      {
+        "width": 48,
+        "src": "/media/identity-genie-icon-48.webp"
+      },
+      {
+        "width": 96,
+        "src": "/media/identity-genie-icon-96.webp"
+      },
+      {
+        "width": 192,
+        "src": "/media/identity-genie-icon-192.webp"
+      }
+    ]
+  },
+  "identity/genie-logo.png": {
+    "width": 1937,
+    "height": 662,
+    "sources": [
+      {
+        "width": 160,
+        "src": "/media/identity-genie-logo-160.webp"
+      },
+      {
+        "width": 320,
+        "src": "/media/identity-genie-logo-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/media/identity-genie-logo-640.webp"
+      }
+    ]
+  },
+  "identity/genies-face.jpeg": {
+    "width": 2048,
+    "height": 1274,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/identity-genies-face-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/identity-genies-face-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/identity-genies-face-1600.webp"
+      }
+    ]
+  },
   "logo.png": {
     "width": 944,
     "height": 944,

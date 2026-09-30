@@ -3,6 +3,7 @@
 ## Implemented
 
 - Complete Direction A design system and page hierarchy, responsive hero and three discipline states.
+- Owner-supplied silver logo and emblem in navigation, footer and browser icons; new portrait on Home and About, with responsive image delivery and unchanged source originals.
 - Five case studies with source artwork, fullscreen image viewers and two interface walkthroughs.
 - Eight individually addressable film entries, verified original credits, optimized native playback and external Instagram destinations.
 - URL-backed archive filters, three working Lab experiments, About and Contact pages.
@@ -14,7 +15,7 @@
 
 - TypeScript, ESLint and focused content/contact tests pass.
 - Production build generates 26 HTML pages, including 22 canonical public routes.
-- Build audit checks internal destinations, image references, page titles/canonicals and the initial compressed JavaScript budget. The homepage entry modules total approximately 172.4 KB gzip.
+- Build audit checks internal destinations, image references, page titles/canonicals and the initial compressed JavaScript budget. After the identity update, the homepage entry modules total approximately 172.9 KB gzip.
 - Four original films encoded to H.264/AAC MP4; originals retained in git and removed from delivery output.
 
 - Local production HTTP checks: main/deep routes return 200, an unknown route returns 404, legacy category navigation reaches its destination, video range requests return 206, and the unconfigured contact capability correctly reports disabled.

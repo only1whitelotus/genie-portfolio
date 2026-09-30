@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router";
 import { ArrowUpRight, ArrowUp, Menu, X, MoveRight } from "lucide-react";
 import { contact, socialLinks } from "../data/content";
 import { usePreferences } from "./preferences";
+import { Brand } from "./brand";
 
 const nav = [
   { to: "/work", label: "Work" },
@@ -42,14 +43,11 @@ export function Header() {
       </a>
       <header className="site-header">
         <Link
-          className="wordmark"
+          className="brand-link"
           to="/"
           aria-label="The Creative Genie — Home"
         >
-          genie
-          <span className="brand-star" aria-hidden="true">
-            ✳
-          </span>
+          <Brand compactOnMobile />
         </Link>
         <span className="header-caption mono">
           Independent creative
@@ -90,9 +88,7 @@ export function Header() {
         aria-label="Navigation"
       >
         <div className="menu-top">
-          <span className="wordmark">
-            genie<span aria-hidden="true">✳</span>
-          </span>
+          <Brand />
           <button
             className="icon-button"
             onClick={close}
@@ -158,8 +154,12 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-main">
-        <Link className="wordmark" to="/">
-          genie<span aria-hidden="true">✳</span>
+        <Link
+          className="brand-link"
+          to="/"
+          aria-label="The Creative Genie — Home"
+        >
+          <Brand />
         </Link>
         <p>
           Akinola Akinjide.

@@ -34,24 +34,22 @@ export default function Home() {
           scrub: 1,
         },
       });
-      gsap.utils
-        .toArray<HTMLElement>(".practice-row")
-        .forEach((row) =>
-          gsap.fromTo(
-            row,
-            { "--row-progress": 0 },
-            {
-              "--row-progress": 1,
-              ease: "none",
-              scrollTrigger: {
-                trigger: row,
-                start: "top 85%",
-                end: "top 45%",
-                scrub: true,
-              },
+      gsap.utils.toArray<HTMLElement>(".practice-row").forEach((row) =>
+        gsap.fromTo(
+          row,
+          { "--row-progress": 0 },
+          {
+            "--row-progress": 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: row,
+              start: "top 85%",
+              end: "top 45%",
+              scrub: true,
             },
-          ),
-        );
+          },
+        ),
+      );
     },
     { scope: root, dependencies: [reduced], revertOnUpdate: true },
   );
@@ -253,8 +251,9 @@ export default function Home() {
       >
         <div className="about-teaser-photo">
           <Artwork
-            src="profile.png"
+            src="identity/genies-face.jpeg"
             alt="Akinola Akinjide, The Creative Genie"
+            sizes="(max-width: 760px) 85vw, 40vw"
           />
           <span className="photo-note mono">THE PERSON BEHIND THE PIXELS.</span>
         </div>

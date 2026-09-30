@@ -181,21 +181,22 @@ input[type="range"] {
   background: rgba(18, 19, 22, 0.96);
   border-bottom: 1px solid var(--line);
 }
-.wordmark {
+.brand-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 34px;
-  letter-spacing: -0.085em;
-  font-weight: 750;
-  line-height: 1;
+  min-height: 44px;
+  flex-shrink: 0;
 }
-.brand-star,
-.wordmark > span {
-  color: var(--silver);
-  font-size: 22px;
-  margin-top: -14px;
-  letter-spacing: 0;
+.brand-logo {
+  display: block;
+  flex-shrink: 0;
+}
+.brand-logo img {
+  display: block;
+  width: 176px;
+  height: 60px;
+  object-fit: contain;
+  object-position: left center;
 }
 .header-caption {
   font-size: 9px;
@@ -964,8 +965,7 @@ input[type="range"] {
 .about-teaser-photo img {
   aspect-ratio: 0.9;
   object-fit: cover;
-  object-position: 50% 30%;
-  filter: saturate(0.8);
+  object-position: center;
 }
 .photo-note {
   display: block;
@@ -2093,7 +2093,7 @@ input[type="range"] {
 .about-portrait img {
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center;
 }
 .about-portrait .mono {
   display: block;
@@ -2432,8 +2432,13 @@ input[type="range"] {
     height: 72px;
     gap: 18px;
   }
-  .wordmark {
-    font-size: 31px;
+  .brand-logo img {
+    width: 160px;
+    height: 55px;
+  }
+  .brand-logo--compact img {
+    width: 46px;
+    height: 46px;
   }
   .desktop-nav {
     display: none;

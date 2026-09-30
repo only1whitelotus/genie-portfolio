@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { Artwork } from "../components/image";
+import { Artwork, imageSource } from "../components/image";
 import { ContactBand } from "../components/shell";
 import { socialLinks } from "../data/content";
 import { seo } from "../lib/seo";
@@ -9,6 +9,7 @@ export const meta = () =>
     "About Akinjide",
     "Meet Akinola Akinjide, The Creative Genie: a multidisciplinary designer, filmmaker and developer connecting ideas across mediums.",
     "/about",
+    imageSource("identity/genies-face.jpeg"),
   );
 export default function About() {
   return (
@@ -26,10 +27,10 @@ export default function About() {
         </div>
         <div className="about-portrait">
           <Artwork
-            src="profile.png"
-            alt="Portrait of Akinola Akinjide wearing a Reckless Era shirt"
+            src="identity/genies-face.jpeg"
+            alt="Portrait of Akinola Akinjide wearing round sunglasses and a burgundy cardigan"
             priority
-            sizes="(max-width: 700px) 100vw, 45vw"
+            sizes="(max-width: 760px) 88vw, 45vw"
           />
           <span className="mono">HELLO, I’M AKINJIDE.</span>
         </div>

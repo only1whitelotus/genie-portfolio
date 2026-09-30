@@ -15,3 +15,15 @@ Reference lock: Dennis Snellenberg's confident typography and personal presentat
 - Build target: this approved reference lock; no additional concept-approval gate is required.
 
 Content needing owner-provided assets or account configuration is tracked in the README. The contact form must never claim delivery when email infrastructure is unconfigured.
+
+## Owner-supplied identity update — 30 September 2026
+
+The supplied silver logo, icon and new portrait are the visual source for this update; the approved Living Studio palette, typography and composition remain the reference lock. Refero's live style search was unavailable, so the existing direction and bundled image/accessibility craft guidance inform the production details.
+
+| Decision                          | Source and role                                         | Application                                                                                      |
+| --------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Preserve the complete silver logo | Owner-supplied `genie-logo.png`; primary identity       | Desktop header, menu and footer; contain without distortion.                                     |
+| Use the emblem at small sizes     | Owner-supplied `genie-icon.png`; compact identity       | Mobile header, PNG favicons and Apple touch icon.                                                |
+| Replace both personal portraits   | Owner-supplied `genies-face.jpeg`; personal photography | Homepage, About page and About social image; centered face, original color, responsive delivery. |
+
+Source files live in `public/identity`. Asset generation removes transparent outer padding from logo derivatives, preserves their alpha, and produces lossless brand WebP files and explicit image dimensions to prevent layout shift. The source originals are unchanged.

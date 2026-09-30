@@ -5,6 +5,7 @@ The previous site separated design, film and development into similar cards and 
 ## Changes
 
 - Graphite, silver, white and blue visual system with original project media, editorial layouts and responsive typography.
+- Updated owner-supplied logo, compact emblem, browser icons and portrait on Home and About; source originals preserved and optimized delivery included.
 - Transforming hero, GSAP scroll details, native cover transitions, and three interactive Lab experiments.
 - Five case studies, eight films, a filterable work archive, individual film pages, About and Contact.
 - React Router framework mode with TypeScript and 22 prerendered public content routes; legacy URLs, proper 404, sitemap and route metadata.
@@ -13,7 +14,7 @@ The previous site separated design, film and development into similar cards and 
 
 ## Validation
 
-Typecheck, lint, five focused tests, production build and static route/media audit pass. The homepage entry modules total about 172.4 KB gzip. Local HTTP checks confirm deep routes, 404 behavior, category redirects and video byte ranges. The published implementation matches the verified local tree, and Vercel successfully built its first preview.
+Typecheck, lint, five focused tests, production build and static route/media audit pass. The homepage entry modules total about 172.9 KB gzip after the identity update. Local HTTP checks confirm deep routes, 404 behavior, category redirects and video byte ranges. The published implementation matches the verified local tree, and Vercel successfully built its first preview. The identity update was rechecked with typecheck, lint, production build, route/media audit and asset dimension/transparency checks.
 
 ## Review before release
 

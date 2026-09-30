@@ -20,7 +20,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#121316" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link
+          rel="icon"
+          href="/media/genie-favicon-32.png"
+          type="image/png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          href="/media/genie-favicon-64.png"
+          type="image/png"
+          sizes="64x64"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="/media/genie-apple-touch.png"
+          sizes="180x180"
+        />
         <Meta />
         <Links />
         <script

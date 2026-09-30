@@ -10,7 +10,6 @@ import path from "node:path";
 
 const root = path.resolve("build/client");
 await cp("public/media", path.join(root, "media"), { recursive: true });
-await copyFile("public/favicon.svg", path.join(root, "favicon.svg"));
 const images = JSON.parse(await readFile("app/data/images.json", "utf8"));
 // Keep source media in git for editing; publish only browser-ready derivatives.
 for (const source of Object.keys(images))
