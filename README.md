@@ -1,16 +1,55 @@
-# React + Vite
+# The Creative Genie — Living Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Akinola Akinjide’s portfolio, rebuilt around design, film and code. Direction A uses graphite, silver, cool white and signal blue, with original project media carrying the visual identity.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Use Node 22.22+ (Node 24 recommended).
 
-## React Compiler
+```sh
+npm ci --include=dev
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```sh
+npm run typecheck
+npm run lint
+npm test
+npm run build
+node scripts/check-build.mjs
+npm run preview
+```
 
-## Expanding the ESLint configuration
+The production preview is served at http://localhost:4173. It uses static HTML, real 404 responses and byte-range video playback. Contact delivery is disabled in local preview; the form prepares an email draft instead.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Architecture
+
+- React 19 + React Router 7 framework mode + Vite + TypeScript.
+- All 22 public content routes are rendered to HTML at build time; legacy category pages and a custom 404 are also generated.
+- GSAP owns the spatial hero and scoped scroll choreography; Motion owns the layout experiment; CSS handles small feedback and native View Transitions.
+- Native scrolling, semantic HTML, responsive layouts, keyboard controls, native modal dialogs, and a saved reduced-motion preference.
+- Content lives in `app/data/content.ts`. Shared components live in `app/components`. Route modules live in `app/routes`.
+- Original assets remain in `public` as editing sources. `npm run assets` uses Sharp to build responsive WebP derivatives and a dimensions manifest. `node scripts/encode-films.mjs` uses FFmpeg to create H.264/AAC MP4s with fast-start playback. Original media is stripped from the deployment output.
+
+## Deployment
+
+The existing Vercel Git integration can deploy this branch. `vercel.json` sets `npm run build`, the `build/client` output, clean URLs, legacy redirects and response headers. The broad old SPA rewrite has been removed so missing paths can return a proper 404.
+
+Production canonical URLs currently use `https://creativegenie.vercel.app`. Update `app/lib/seo.ts` and `scripts/postbuild.mjs` together if the primary domain changes.
+
+## Optional contact delivery
+
+The public email link always works. Without email-service configuration, the short form opens a prepared draft in the visitor’s email app and explicitly asks them to send it there.
+
+To enable server-side delivery, set these environment variables in Vercel:
+
+- `RESEND_API_KEY`: your Resend API key.
+- `CONTACT_FROM`: a sender address on a domain verified in Resend.
+
+The endpoint validates fields, rejects cross-origin submissions, has a honeypot and best-effort per-instance throttling, and returns success only after the provider accepts the email. Delivery credentials stay server-side. For high-volume use, replace instance-local throttling with a shared rate-limit store. The recipient is the portfolio’s existing public email address.
+
+## Content and release notes
+
+See `docs/direction-a.md` for the locked direction and `docs/release-review.md` for verification and content follow-ups. No invented launch status, performance metrics, years-of-experience totals, testimonials or client outcomes have been added.
+
+The résumé link intentionally retains the existing resources folder until a direct, current résumé is supplied. Full film accessibility alternatives and a curated showreel need an editorial pass with the original audio/process assets. No paid media, analytics or 3D service is required by this build.
