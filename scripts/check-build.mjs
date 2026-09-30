@@ -23,6 +23,15 @@ for (const file of pages) {
     html,
     /rel="canonical" href="https:\/\/creativegenie\.vercel\.app/,
   );
+  const ids = new Set(
+    [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]),
+  );
+  for (const match of html.matchAll(/href="#([^"]+)"/g)) {
+    assert.ok(
+      ids.has(decodeURIComponent(match[1])),
+      `${file} references missing section #${match[1]}`,
+    );
+  }
   for (const match of html.matchAll(/(?:src|href)="(\/(?!\/)[^"?#]*)/g)) {
     const url = match[1];
     if (url === "/api/contact") continue;
@@ -65,5 +74,5 @@ assert.ok(
   `Initial JS budget exceeded: ${gzipBytes} bytes gzip`,
 );
 console.log(
-  `Verified ${pages.length} prerendered pages, internal links/media, canonical metadata, 404, and homepage JS: ${(gzipBytes / 1000).toFixed(1)} KB gzip.`,
+  `Verified ${pages.length} prerendered pages, internal links/media/section anchors, canonical metadata, 404, and homepage JS: ${(gzipBytes / 1000).toFixed(1)} KB gzip.`,
 );

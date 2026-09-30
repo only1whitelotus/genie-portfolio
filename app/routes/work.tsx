@@ -1,8 +1,11 @@
+import { useRef } from "react";
 import { Link, useSearchParams } from "react-router";
+import { Search, X } from "lucide-react";
 import { ProjectCard, FilmCard } from "../components/cards";
 import { ContactBand, TextLink } from "../components/shell";
 import { projects, films } from "../data/content";
 import { seo } from "../lib/seo";
+import { selectWork, workFilter, workHref, type WorkFilter } from "../lib/work";
 
 export const meta = () =>
   seo(
@@ -11,27 +14,23 @@ export const meta = () =>
     "/work",
   );
 export default function Work() {
-  const [params] = useSearchParams();
-  const filter = ["design", "film", "code"].includes(params.get("type") || "")
-    ? params.get("type")
-    : "all";
-  const visible = projects.filter(
-    (p) =>
-      filter === "all" ||
-      filter === "design" ||
-      p.discipline.toLowerCase() === filter,
-  );
-  const visibleFilms = filter === "all" || filter === "film" ? films : [];
-  const filters = [
-    { value: "all", label: "All work", count: projects.length + films.length },
-    { value: "design", label: "Brand & product", count: projects.length },
-    { value: "film", label: "Film & motion", count: films.length },
-    {
-      value: "code",
-      label: "Development",
-      count: projects.filter((p) => p.discipline === "Code").length,
-    },
+  const [params, setParams] = useSearchParams();
+  const search = useRef<HTMLInputElement>(null);
+  const filter = workFilter(params.get("type"));
+  const query = params.get("q") || "";
+  const visible = selectWork(projects, films, filter, query);
+  const filters: { value: WorkFilter; label: string }[] = [
+    { value: "all", label: "All work" },
+    { value: "design", label: "Brand & product" },
+    { value: "film", label: "Film & motion" },
+    { value: "code", label: "Development" },
   ];
+  function updateSearch(value: string) {
+    const next = new URLSearchParams(params);
+    if (value) next.set("q", value);
+    else next.delete("q");
+    void setParams(next, { replace: true, preventScrollReset: true });
+  }
   return (
     <main id="main">
       <section className="page-intro section-pad light-section">
@@ -53,34 +52,97 @@ export default function Work() {
         className="work-index light-section section-pad"
         aria-label="Project collection"
       >
+        <div className="work-toolbar">
+          <div
+            className="work-search"
+            role="search"
+            aria-label="Search selected work"
+          >
+            <Search size={19} aria-hidden="true" />
+            <label className="sr-only" htmlFor="work-search">
+              Search projects and films
+            </label>
+            <input
+              ref={search}
+              id="work-search"
+              type="search"
+              value={query}
+              onChange={(event) => updateSearch(event.target.value)}
+              placeholder="Search a project, skill or client…"
+              maxLength={100}
+              autoComplete="off"
+              aria-controls="work-results"
+            />
+            {query && (
+              <button
+                type="button"
+                aria-label="Clear search"
+                onClick={() => {
+                  updateSearch("");
+                  search.current?.focus();
+                }}
+              >
+                <X size={17} />
+              </button>
+            )}
+          </div>
+          <p
+            className="work-result-count mono"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            {visible.total} {visible.total === 1 ? "result" : "results"}
+            {query.trim() ? ` for “${query.trim()}”` : " to explore"}
+          </p>
+        </div>
         <nav className="filter-bar" aria-label="Filter work">
-          {filters.map(({ value, label, count }) => (
+          {filters.map(({ value, label }) => (
             <Link
               key={value}
-              to={value === "all" ? "/work" : `/work?type=${value}`}
+              to={workHref(value, query)}
               preventScrollReset
               viewTransition
               aria-current={filter === value ? "page" : undefined}
             >
               {label}
-              <sup>{count}</sup>
+              <sup>{selectWork(projects, films, value, query).total}</sup>
             </Link>
           ))}
         </nav>
-        <p className="sr-only" role="status">
-          {visible.length + visibleFilms.length} projects shown
-        </p>
-        <div className="work-grid">
-          {visible.map((project) => (
+        <div id="work-results" className="work-grid">
+          {visible.projects.map((project) => (
             <ProjectCard
               key={project.slug}
               project={project}
               index={projects.indexOf(project)}
             />
           ))}
-          {visibleFilms.map((film, i) => (
+          {visible.films.map((film, i) => (
             <FilmCard key={film.slug} film={film} index={i} />
           ))}
+          {visible.total === 0 && (
+            <div className="work-empty">
+              <p className="eyebrow">A DIFFERENT WAY IN</p>
+              <h2>No work matches just yet.</h2>
+              <p>
+                Try a client, a skill such as design or motion, or explore the
+                full collection.
+              </p>
+              <button
+                className="text-link"
+                onClick={() => {
+                  void setParams(
+                    {},
+                    { replace: true, preventScrollReset: true },
+                  );
+                  search.current?.focus();
+                }}
+              >
+                Clear search and filters <X size={17} />
+              </button>
+            </div>
+          )}
         </div>
       </section>
       <ContactBand />

@@ -35,7 +35,7 @@ export default function Films() {
             Press play. Stay for a feeling.
           </p>
           <span className="mono">
-            08 SELECTED FILMS
+            {String(films.length).padStart(2, "0")} SELECTED FILMS
             <br />
             SOUND ON, WHEN YOU’RE READY.
           </span>

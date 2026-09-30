@@ -44,6 +44,7 @@ export function Walkthrough({ slug }: { slug: string }) {
   if (!steps) return null;
   return (
     <section
+      id="walkthrough"
       className="walkthrough section-pad"
       aria-label="Interface walkthrough"
     >

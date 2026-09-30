@@ -1,9 +1,15 @@
 import sharp from "sharp";
-import { readdir, mkdir, writeFile } from "node:fs/promises";
+import { readdir, mkdir, readFile, writeFile, rm } from "node:fs/promises";
 import path from "node:path";
 
 const root = path.resolve("public");
 const manifest = {};
+const previous = JSON.parse(
+  await readFile("app/data/images.json", "utf8").catch((error) => {
+    if (error.code === "ENOENT") return "{}";
+    throw error;
+  }),
+);
 async function walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     if (["media", "videos"].includes(entry.name)) continue;
@@ -63,10 +69,25 @@ await sharp(icon)
   .extend({ top: 16, bottom: 16, left: 16, right: 16, background: "#121316" })
   .png()
   .toFile(path.join(root, "media/genie-apple-touch.png"));
+const generated = new Set(
+  Object.values(manifest).flatMap((image) =>
+    image.sources.map((source) => source.src),
+  ),
+);
+let removed = 0;
+for (const image of Object.values(previous)) {
+  for (const { src } of image.sources) {
+    // Only prune files produced by the previous image manifest, never films or originals.
+    if (!generated.has(src) && /^\/media\/[^/]+\.webp$/.test(src)) {
+      await rm(path.join(root, src.slice(1)), { force: true });
+      removed++;
+    }
+  }
+}
 await writeFile(
   "app/data/images.json",
   JSON.stringify(manifest, null, 2) + "\n",
 );
 console.log(
-  `Optimized ${Object.keys(manifest).length} images into responsive WebP sources.`,
+  `Optimized ${Object.keys(manifest).length} images; removed ${removed} stale derivatives.`,
 );

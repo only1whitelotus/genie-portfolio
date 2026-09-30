@@ -7,14 +7,15 @@ The previous site separated design, film and development into similar cards and 
 - Graphite, silver, white and blue visual system with original project media, editorial layouts and responsive typography.
 - Updated owner-supplied logo, compact emblem, browser icons and portrait on Home and About; source originals preserved and optimized delivery included.
 - Transforming hero, GSAP scroll details, native cover transitions, and three interactive Lab experiments.
-- Five case studies, eight films, a filterable work archive, individual film pages, About and Contact.
+- Five case studies with sticky section navigation, eight films, a searchable work archive with shareable queries and filters, individual film pages, About and Contact.
 - React Router framework mode with TypeScript and 22 prerendered public content routes; legacy URLs, proper 404, sitemap and route metadata.
-- Responsive WebP assets and H.264/AAC film delivery. Original media stays in the repository but is excluded from the production output.
+- Responsive WebP assets and H.264/AAC film delivery. Active original media stays in the repository but is excluded from the production output. Removed 92 unused image files (25.7 MB); asset generation now prunes obsolete derivatives.
 - Reduced-motion preferences, native dialogs, keyboard controls and an honest email fallback. Optional server-side delivery is supported through environment configuration.
+- Fullscreen gallery images load on demand, support arrow-key navigation and restore focus to the opening thumbnail when closed.
 
 ## Validation
 
-Typecheck, lint, five focused tests, production build and static route/media audit pass. The homepage entry modules total about 172.9 KB gzip after the identity update. Local HTTP checks confirm deep routes, 404 behavior, category redirects and video byte ranges. The published implementation matches the verified local tree, and Vercel successfully built its first preview. The identity update was rechecked with typecheck, lint, production build, route/media audit and asset dimension/transparency checks.
+Typecheck, lint, eight focused tests, production build and the static route/media/section-anchor audit pass. The homepage entry modules total about 172.5 KB gzip. Local HTTP checks confirm deep routes, 404 behavior, category redirects and video byte ranges. Refinement checks verify section links on all five case studies, deferred image markup in closed galleries, current identity assets and removal of retired assets. The asset manifest contains 50 active originals with verified derivatives. Vercel successfully built the earlier implementation and identity previews.
 
 ## Review before release
 

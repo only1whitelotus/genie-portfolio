@@ -12,6 +12,7 @@
   --line: rgba(255, 255, 255, 0.17);
   --line-dark: rgba(18, 19, 22, 0.18);
   --gutter: clamp(22px, 5vw, 90px);
+  --header-height: 82px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   font-family: "Manrope Variable", sans-serif;
   color: var(--paper);
@@ -27,7 +28,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: calc(var(--header-height) + 18px);
 }
 body {
   margin: 0;
@@ -173,7 +174,7 @@ input[type="range"] {
   left: 0;
   right: 0;
   z-index: 50;
-  height: 82px;
+  height: var(--header-height);
   display: flex;
   align-items: center;
   gap: 35px;
@@ -1164,14 +1165,117 @@ input[type="range"] {
 .work-index {
   padding-bottom: 120px;
 }
+.work-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding-block: 26px;
+  border-top: 1px solid var(--line-dark);
+}
+.work-search {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(100%, 430px);
+  min-height: 50px;
+  border-bottom: 1px solid var(--ink-muted);
+  color: var(--ink-muted);
+}
+.work-search:focus-within {
+  border-color: var(--blue);
+}
+.work-search input {
+  min-width: 0;
+  width: 100%;
+  padding: 12px 0;
+  border: 0;
+  background: transparent;
+  color: var(--graphite);
+  font-size: 14px;
+}
+.work-search input::placeholder {
+  color: var(--ink-muted);
+}
+.work-search input::-webkit-search-cancel-button {
+  display: none;
+}
+.work-search > svg {
+  flex-shrink: 0;
+}
+.work-search button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  color: var(--graphite);
+}
+.work-result-count {
+  font-size: 10px;
+  color: var(--ink-muted);
+  text-align: right;
+  overflow-wrap: anywhere;
+  max-width: 45%;
+}
 .filter-bar {
   display: flex;
   gap: 12px;
   padding-block: 25px;
-  border-top: 1px solid var(--line-dark);
   border-bottom: 1px solid var(--line-dark);
   margin-bottom: 60px;
   flex-wrap: wrap;
+}
+.work-empty {
+  grid-column: 1 / -1;
+  padding: 20px 0 55px;
+  max-width: 640px;
+}
+.work-empty h2 {
+  font-size: clamp(32px, 4vw, 54px);
+}
+.work-empty > p:not(.eyebrow) {
+  margin-block: 20px 28px;
+  color: var(--ink-muted);
+  max-width: 460px;
+}
+.case-navigation {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-height: 60px;
+  background: rgba(243, 244, 242, 0.98);
+  border-bottom: 1px solid var(--line-dark);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+.case-navigation > span {
+  margin-right: auto;
+  font-size: 9px;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+.case-navigation a {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  flex-shrink: 0;
+  font-size: 11px;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+.case-navigation a[aria-current="location"] {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+.case-navigation a:hover {
+  color: var(--blue);
+}
+.case-study section[id] {
+  scroll-margin-top: 66px;
 }
 .filter-bar a {
   display: flex;
@@ -1493,6 +1597,11 @@ input[type="range"] {
   font-size: 12px;
   text-align: center;
   color: var(--silver);
+  margin-inline: auto;
+}
+.lightbox-hint {
+  font-size: 9px;
+  color: var(--muted);
 }
 .film-intro h1 {
   position: relative;
@@ -2427,9 +2536,9 @@ input[type="range"] {
 @media (max-width: 760px) {
   :root {
     --gutter: 24px;
+    --header-height: 72px;
   }
   .site-header {
-    height: 72px;
     gap: 18px;
   }
   .brand-logo img {
@@ -2967,6 +3076,35 @@ input[type="range"] {
   }
   .lightbox-bottom p {
     font-size: 10px;
+  }
+  .lightbox-hint {
+    display: none;
+  }
+  .work-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    padding-block: 15px;
+  }
+  .work-search {
+    width: 100%;
+  }
+  .work-search input {
+    font-size: 16px;
+  }
+  .work-result-count {
+    max-width: 100%;
+    text-align: left;
+  }
+  .case-navigation {
+    gap: 24px;
+    min-height: 54px;
+  }
+  .case-navigation > span {
+    display: none;
+  }
+  .case-navigation a {
+    min-height: 54px;
   }
   .film-grid {
     gap: 40px;

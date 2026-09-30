@@ -29,7 +29,8 @@ The production preview is served at http://localhost:4173. It uses static HTML, 
 - GSAP owns the spatial hero and scoped scroll choreography; Motion owns the layout experiment; CSS handles small feedback and native View Transitions.
 - Native scrolling, semantic HTML, responsive layouts, keyboard controls, native modal dialogs, and a saved reduced-motion preference.
 - Content lives in `app/data/content.ts`. Shared components live in `app/components`. Route modules live in `app/routes`.
-- Original assets remain in `public` as editing sources. `npm run assets` uses Sharp to build responsive WebP derivatives and a dimensions manifest. `node scripts/encode-films.mjs` uses FFmpeg to create H.264/AAC MP4s with fast-start playback. Original media is stripped from the deployment output.
+- Active original assets remain in `public` as editing sources. `npm run assets` uses Sharp to build responsive WebP derivatives and a dimensions manifest, then prunes obsolete derivatives recorded in the previous manifest. `node scripts/encode-films.mjs` uses FFmpeg to create H.264/AAC MP4s with fast-start playback. Original media is stripped from the deployment output.
+- Work search and discipline filters stay in the URL so a selected collection can be shared. Case studies include section navigation; full-size gallery images load only when their viewer is opened.
 
 ## Deployment
 

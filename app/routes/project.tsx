@@ -4,6 +4,7 @@ import { projects } from "../data/content";
 import { Artwork, imageSource } from "../components/image";
 import { Walkthrough } from "../components/walkthrough";
 import { Gallery } from "../components/gallery";
+import { CaseNavigation } from "../components/case-navigation";
 import { seo } from "../lib/seo";
 
 export const meta: MetaFunction = ({ params }) => {
@@ -21,6 +22,15 @@ export default function Project() {
   const project = projects.find((p) => p.slug === slug);
   if (!project) throw new Response("Project not found", { status: 404 });
   const next = projects[(projects.indexOf(project) + 1) % projects.length];
+  const sections = [
+    { id: "overview", label: "Overview" },
+    { id: "approach", label: "Approach" },
+    ...(project.slug === "fbl" || project.slug === "chop-central"
+      ? [{ id: "walkthrough", label: "Walkthrough" }]
+      : []),
+    { id: "details", label: "Design details" },
+    { id: "next-project", label: "Next project" },
+  ];
   return (
     <main
       id="main"
@@ -54,7 +64,9 @@ export default function Project() {
           sizes="100vw"
         />
       </div>
+      <CaseNavigation key={project.slug} sections={sections} />
       <section
+        id="overview"
         className="case-overview section-pad"
         aria-label="Project overview"
       >
@@ -78,6 +90,7 @@ export default function Project() {
         </dl>
       </section>
       <section
+        id="approach"
         className="case-brief section-pad"
         aria-label="Creative approach"
       >
@@ -92,7 +105,11 @@ export default function Project() {
       </section>
       <Walkthrough key={project.slug} slug={project.slug} />
       {project.chapters.map((chapter, index) => (
-        <section className="case-chapter section-pad" key={chapter.title}>
+        <section
+          id={index === 0 ? "details" : `chapter-${index + 1}`}
+          className="case-chapter section-pad"
+          key={chapter.title}
+        >
           <div className="chapter-heading">
             <span className="mono">0{index + 3} / THE DETAILS</span>
             <h2>{chapter.title}</h2>
@@ -101,7 +118,7 @@ export default function Project() {
           <Gallery images={chapter.images} />
         </section>
       ))}
-      <section className="case-next section-pad">
+      <section id="next-project" className="case-next section-pad">
         <p className="eyebrow">KEEP EXPLORING</p>
         <Link to={`/project/${next.slug}`} viewTransition>
           <div>

@@ -27,3 +27,14 @@ The supplied silver logo, icon and new portrait are the visual source for this u
 | Replace both personal portraits   | Owner-supplied `genies-face.jpeg`; personal photography | Homepage, About page and About social image; centered face, original color, responsive delivery. |
 
 Source files live in `public/identity`. Asset generation removes transparent outer padding from logo derivatives, preserves their alpha, and produces lossless brand WebP files and explicit image dimensions to prevent layout shift. The source originals are unchanged.
+
+## Portfolio refinement — 30 September 2026
+
+Build target: the existing Living Studio UI and the approved reference lock. Preserve the artwork, graphite/white section rhythm, Manrope type and signal-blue action accents. The live Refero service remains unavailable; existing page patterns and the bundled form, focus and media guidance govern these changes.
+
+| Decision | Reference / role | Reason |
+| --- | --- | --- |
+| Add a restrained search field above the archive filters | Existing filter bar and contact inputs; discovery control | Visitors can find a client or skill and share the result through the URL. |
+| Add section links to long case studies | Existing case-study hierarchy; navigation | A slim sticky bar exposes the overview, approach, walkthrough and artwork without changing the narrative. |
+| Load gallery enlargements on demand | Existing native dialog and Refero media/focus guidance | Avoid hidden full-size image requests, keep normal link behavior and restore keyboard focus. |
+| Prune only confirmed unused images | Application references and generated image manifest | Remove obsolete material while preserving active editing sources, films and the supplied identity. |
