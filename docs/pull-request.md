@@ -13,10 +13,10 @@ The previous site separated design, film and development into similar cards and 
 
 ## Validation
 
-Typecheck, lint, five focused tests, production build and static route/media audit pass. The homepage entry modules total about 172.4 KB gzip. Local HTTP checks confirm deep routes, 404 behavior, category redirects and video byte ranges.
+Typecheck, lint, five focused tests, production build and static route/media audit pass. The homepage entry modules total about 172.4 KB gzip. Local HTTP checks confirm deep routes, 404 behavior, category redirects and video byte ranges. The published implementation matches the verified local tree, and Vercel successfully built its first preview.
 
 ## Review before release
 
-Browser visual and interaction QA is pending a preview deployment. Current film captions/transcripts, a curated showreel, a direct résumé and verified launch/outcome claims remain editorial follow-ups. Email delivery falls back to an email draft until configured.
+Browser visual and interaction QA is pending authenticated preview access: the preview redirects the review browser to Vercel sign-in. Current film captions/transcripts, a curated showreel, a direct résumé and verified launch/outcome claims remain editorial follow-ups. Email delivery falls back to an email draft until configured.
 
 Keep this as a draft until preview review is complete. The change has not been merged or deployed to production.

@@ -18,11 +18,13 @@
 - Four original films encoded to H.264/AAC MP4; originals retained in git and removed from delivery output.
 
 - Local production HTTP checks: main/deep routes return 200, an unknown route returns 404, legacy category navigation reaches its destination, video range requests return 206, and the unconfigured contact capability correctly reports disabled.
-- Browser visual, touch, keyboard and real-device performance checks are pending. The cloud browser cannot access the local preview, and repository write access currently blocks a Vercel preview.
+- Browser visual, touch, keyboard and real-device performance checks are pending. The deployed preview requires Vercel sign-in in the review browser.
 
-## Publishing blocker
+## Publishing status
 
-The connected GitHub integration rejected branch creation with HTTP 403: “Resource not accessible by integration.” Command-line Git had no publishing credential. No remote branch, PR or deployment was created. Local changes are committed on `feature/living-studio`; the live site is unchanged.
+GitHub permissions are resolved. The complete implementation was published to `feature/living-studio` on 30 September 2026, and its remote tree was verified against the completed local build. [Draft PR #1](https://github.com/only1whitelotus/genie-portfolio/pull/1) is open against `main`.
+
+Vercel successfully built the first preview for implementation commit `d8a7e5361bf3410b5b2940affd6161f0b6a66b83`. The PR contains the preview link. The preview redirects the review browser to Vercel sign-in, so visual and interaction QA remains pending authenticated access. Nothing has been merged into `main` or deployed to production by this change.
 
 ## Still to verify on the deployed preview
 
