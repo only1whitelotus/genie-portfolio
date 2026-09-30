@@ -1,0 +1,842 @@
+{
+  "Adminhome.jpeg": {
+    "width": 591,
+    "height": 1280,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/Adminhome-480.webp"
+      },
+      {
+        "width": 591,
+        "src": "/media/Adminhome-591.webp"
+      }
+    ]
+  },
+  "Adminsettings.jpeg": {
+    "width": 591,
+    "height": 1280,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/Adminsettings-480.webp"
+      },
+      {
+        "width": 591,
+        "src": "/media/Adminsettings-591.webp"
+      }
+    ]
+  },
+  "News.jpeg": {
+    "width": 591,
+    "height": 1280,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/News-480.webp"
+      },
+      {
+        "width": 591,
+        "src": "/media/News-591.webp"
+      }
+    ]
+  },
+  "Playermodal.jpeg": {
+    "width": 591,
+    "height": 1280,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/Playermodal-480.webp"
+      },
+      {
+        "width": 591,
+        "src": "/media/Playermodal-591.webp"
+      }
+    ]
+  },
+  "Statscenter.jpeg": {
+    "width": 591,
+    "height": 1280,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/Statscenter-480.webp"
+      },
+      {
+        "width": 591,
+        "src": "/media/Statscenter-591.webp"
+      }
+    ]
+  },
+  "Transfertab.jpeg": {
+    "width": 591,
+    "height": 1280,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/Transfertab-480.webp"
+      },
+      {
+        "width": 591,
+        "src": "/media/Transfertab-591.webp"
+      }
+    ]
+  },
+  "Userhome.jpeg": {
+    "width": 591,
+    "height": 1280,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/Userhome-480.webp"
+      },
+      {
+        "width": 591,
+        "src": "/media/Userhome-591.webp"
+      }
+    ]
+  },
+  "c1.png": {
+    "width": 1920,
+    "height": 1018,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/c1-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/c1-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/c1-1600.webp"
+      }
+    ]
+  },
+  "c2.png": {
+    "width": 1920,
+    "height": 1013,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/c2-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/c2-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/c2-1600.webp"
+      }
+    ]
+  },
+  "c3.png": {
+    "width": 1920,
+    "height": 1010,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/c3-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/c3-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/c3-1600.webp"
+      }
+    ]
+  },
+  "c4.png": {
+    "width": 1917,
+    "height": 1018,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/c4-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/c4-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/c4-1600.webp"
+      }
+    ]
+  },
+  "c5.png": {
+    "width": 1917,
+    "height": 1015,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/c5-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/c5-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/c5-1600.webp"
+      }
+    ]
+  },
+  "c6.png": {
+    "width": 1920,
+    "height": 1014,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/c6-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/c6-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/c6-1600.webp"
+      }
+    ]
+  },
+  "c7.png": {
+    "width": 1917,
+    "height": 1019,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/c7-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/c7-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/c7-1600.webp"
+      }
+    ]
+  },
+  "ecoloop-billboard.png": {
+    "width": 1350,
+    "height": 1080,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/ecoloop-billboard-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/ecoloop-billboard-960.webp"
+      },
+      {
+        "width": 1350,
+        "src": "/media/ecoloop-billboard-1350.webp"
+      }
+    ]
+  },
+  "ecoloop-bins.png": {
+    "width": 1350,
+    "height": 1080,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/ecoloop-bins-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/ecoloop-bins-960.webp"
+      },
+      {
+        "width": 1350,
+        "src": "/media/ecoloop-bins-1350.webp"
+      }
+    ]
+  },
+  "ecoloop-extra-1.png": {
+    "width": 1350,
+    "height": 1080,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/ecoloop-extra-1-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/ecoloop-extra-1-960.webp"
+      },
+      {
+        "width": 1350,
+        "src": "/media/ecoloop-extra-1-1350.webp"
+      }
+    ]
+  },
+  "ecoloop-extra-2.png": {
+    "width": 1350,
+    "height": 1080,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/ecoloop-extra-2-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/ecoloop-extra-2-960.webp"
+      },
+      {
+        "width": 1350,
+        "src": "/media/ecoloop-extra-2-1350.webp"
+      }
+    ]
+  },
+  "ecoloop-id.png": {
+    "width": 1350,
+    "height": 1080,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/ecoloop-id-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/ecoloop-id-960.webp"
+      },
+      {
+        "width": 1350,
+        "src": "/media/ecoloop-id-1350.webp"
+      }
+    ]
+  },
+  "ecoloop-logo-final.png": {
+    "width": 6750,
+    "height": 5400,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/ecoloop-logo-final-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/ecoloop-logo-final-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/ecoloop-logo-final-1600.webp"
+      }
+    ]
+  },
+  "ecoloop-logo-grid.png": {
+    "width": 1350,
+    "height": 1080,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/ecoloop-logo-grid-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/ecoloop-logo-grid-960.webp"
+      },
+      {
+        "width": 1350,
+        "src": "/media/ecoloop-logo-grid-1350.webp"
+      }
+    ]
+  },
+  "ecoloop-main.png": {
+    "width": 1350,
+    "height": 1080,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/ecoloop-main-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/ecoloop-main-960.webp"
+      },
+      {
+        "width": 1350,
+        "src": "/media/ecoloop-main-1350.webp"
+      }
+    ]
+  },
+  "ecoloop-polo.png": {
+    "width": 1350,
+    "height": 1080,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/ecoloop-polo-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/ecoloop-polo-960.webp"
+      },
+      {
+        "width": 1350,
+        "src": "/media/ecoloop-polo-1350.webp"
+      }
+    ]
+  },
+  "foodify/1.png": {
+    "width": 3240,
+    "height": 3240,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/foodify-1-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/foodify-1-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/foodify-1-1600.webp"
+      }
+    ]
+  },
+  "foodify/10.png": {
+    "width": 3240,
+    "height": 3240,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/foodify-10-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/foodify-10-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/foodify-10-1600.webp"
+      }
+    ]
+  },
+  "foodify/2.png": {
+    "width": 5000,
+    "height": 5000,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/foodify-2-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/foodify-2-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/foodify-2-1600.webp"
+      }
+    ]
+  },
+  "foodify/3.png": {
+    "width": 3240,
+    "height": 3240,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/foodify-3-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/foodify-3-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/foodify-3-1600.webp"
+      }
+    ]
+  },
+  "foodify/6.png": {
+    "width": 3240,
+    "height": 3240,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/foodify-6-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/foodify-6-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/foodify-6-1600.webp"
+      }
+    ]
+  },
+  "foodify/7.png": {
+    "width": 3240,
+    "height": 3240,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/foodify-7-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/foodify-7-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/foodify-7-1600.webp"
+      }
+    ]
+  },
+  "foodify/9.png": {
+    "width": 3240,
+    "height": 3240,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/foodify-9-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/foodify-9-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/foodify-9-1600.webp"
+      }
+    ]
+  },
+  "identity/genie-icon.png": {
+    "width": 711,
+    "height": 711,
+    "sources": [
+      {
+        "width": 48,
+        "src": "/media/identity-genie-icon-48.webp"
+      },
+      {
+        "width": 96,
+        "src": "/media/identity-genie-icon-96.webp"
+      },
+      {
+        "width": 192,
+        "src": "/media/identity-genie-icon-192.webp"
+      }
+    ]
+  },
+  "identity/genie-logo.png": {
+    "width": 1937,
+    "height": 662,
+    "sources": [
+      {
+        "width": 160,
+        "src": "/media/identity-genie-logo-160.webp"
+      },
+      {
+        "width": 320,
+        "src": "/media/identity-genie-logo-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/media/identity-genie-logo-640.webp"
+      }
+    ]
+  },
+  "identity/genies-face.jpeg": {
+    "width": 2048,
+    "height": 1274,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/identity-genies-face-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/identity-genies-face-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/identity-genies-face-1600.webp"
+      }
+    ]
+  },
+  "rex/grid-blueprint.png": {
+    "width": 3507,
+    "height": 2480,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/rex-grid-blueprint-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/rex-grid-blueprint-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/rex-grid-blueprint-1600.webp"
+      }
+    ]
+  },
+  "rex/grid-elements.png": {
+    "width": 3507,
+    "height": 2480,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/rex-grid-elements-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/rex-grid-elements-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/rex-grid-elements-1600.webp"
+      }
+    ]
+  },
+  "rex/hero-signage.png": {
+    "width": 1080,
+    "height": 1080,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/rex-hero-signage-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/rex-hero-signage-960.webp"
+      },
+      {
+        "width": 1080,
+        "src": "/media/rex-hero-signage-1080.webp"
+      }
+    ]
+  },
+  "rex/mockup-1.png": {
+    "width": 3507,
+    "height": 2480,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/rex-mockup-1-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/rex-mockup-1-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/rex-mockup-1-1600.webp"
+      }
+    ]
+  },
+  "rex/mockup-3.png": {
+    "width": 2250,
+    "height": 1500,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/rex-mockup-3-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/rex-mockup-3-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/rex-mockup-3-1600.webp"
+      }
+    ]
+  },
+  "rex/mockup-5.png": {
+    "width": 1800,
+    "height": 1350,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/rex-mockup-5-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/rex-mockup-5-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/rex-mockup-5-1600.webp"
+      }
+    ]
+  },
+  "rex/monogram-pattern.png": {
+    "width": 3507,
+    "height": 2480,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/rex-monogram-pattern-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/rex-monogram-pattern-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/rex-monogram-pattern-1600.webp"
+      }
+    ]
+  },
+  "thumbnails/busec.jpeg": {
+    "width": 828,
+    "height": 466,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-busec-480.webp"
+      },
+      {
+        "width": 828,
+        "src": "/media/thumbnails-busec-828.webp"
+      }
+    ]
+  },
+  "thumbnails/chop-central.png": {
+    "width": 1091,
+    "height": 764,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-chop-central-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/thumbnails-chop-central-960.webp"
+      },
+      {
+        "width": 1091,
+        "src": "/media/thumbnails-chop-central-1091.webp"
+      }
+    ]
+  },
+  "thumbnails/ciddy.jpeg": {
+    "width": 828,
+    "height": 464,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-ciddy-480.webp"
+      },
+      {
+        "width": 828,
+        "src": "/media/thumbnails-ciddy-828.webp"
+      }
+    ]
+  },
+  "thumbnails/ciddy2.jpeg": {
+    "width": 828,
+    "height": 466,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-ciddy2-480.webp"
+      },
+      {
+        "width": 828,
+        "src": "/media/thumbnails-ciddy2-828.webp"
+      }
+    ]
+  },
+  "thumbnails/fbl.png": {
+    "width": 1707,
+    "height": 860,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-fbl-480.webp"
+      },
+      {
+        "width": 960,
+        "src": "/media/thumbnails-fbl-960.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/media/thumbnails-fbl-1600.webp"
+      }
+    ]
+  },
+  "thumbnails/fruison.jpeg": {
+    "width": 828,
+    "height": 460,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-fruison-480.webp"
+      },
+      {
+        "width": 828,
+        "src": "/media/thumbnails-fruison-828.webp"
+      }
+    ]
+  },
+  "thumbnails/reck1.jpeg": {
+    "width": 828,
+    "height": 460,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-reck1-480.webp"
+      },
+      {
+        "width": 828,
+        "src": "/media/thumbnails-reck1-828.webp"
+      }
+    ]
+  },
+  "thumbnails/reck2.jpeg": {
+    "width": 828,
+    "height": 462,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-reck2-480.webp"
+      },
+      {
+        "width": 828,
+        "src": "/media/thumbnails-reck2-828.webp"
+      }
+    ]
+  },
+  "thumbnails/reck3.jpeg": {
+    "width": 828,
+    "height": 460,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-reck3-480.webp"
+      },
+      {
+        "width": 828,
+        "src": "/media/thumbnails-reck3-828.webp"
+      }
+    ]
+  },
+  "thumbnails/yte.jpeg": {
+    "width": 828,
+    "height": 463,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/media/thumbnails-yte-480.webp"
+      },
+      {
+        "width": 828,
+        "src": "/media/thumbnails-yte-828.webp"
+      }
+    ]
+  }
+}

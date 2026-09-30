@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated framework output and private config
+build/
+.react-router/
+.vercel/
+.env*
+!.env.example
